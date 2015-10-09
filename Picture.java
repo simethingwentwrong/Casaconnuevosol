@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;   
     private Square greed;
+    private Person p1;
 
     /**
      * Constructor for objects of class Picture
@@ -116,5 +117,20 @@ public class Picture
             greed.changeColor("black");
             
          }
+    }
+    
+    /**
+     * Change this picture to use person
+     */
+    public void person()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+        p1 = new Person();
+        p1.moveHorizontal(-300);
+        p1.moveVertical(40);       
+        p1.makeVisible();
+        p1.slowMoveHorizontal(150);
+        }
     }
 }
