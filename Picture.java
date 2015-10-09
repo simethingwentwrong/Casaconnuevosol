@@ -62,7 +62,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();  
-        sun.slowMoveVertical(130);
+        
         
         
         
@@ -90,7 +90,7 @@ public class Picture
     /**
      * Change this picture to use color display
      */
-    public void setColor()
+    public void changeColor()
     {
         if (wall != null)   // only if it's painted already...
         {
@@ -99,5 +99,16 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
         }
+    }
+    
+    /**
+     * Change this picture to use sun move
+     */
+    public void moveSun()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            sun.slowMoveVertical(130);
+         }
     }
 }
