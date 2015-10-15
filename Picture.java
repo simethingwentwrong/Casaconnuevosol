@@ -17,6 +17,9 @@ public class Picture
     private Circle sun;   
     private Square greed;
     private Person p1;
+    private Circle eye;
+    private Triangle piramide;
+    private Circle pupila;
 
     /**
      * Constructor for objects of class Picture
@@ -64,6 +67,23 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();  
         
+        piramide = new Triangle();        
+        piramide.moveVertical(-70);
+        piramide.moveHorizontal(-150);
+        piramide.changeSize(100,100);
+        piramide.changeColor("yellow");
+        
+        eye = new Circle();
+        eye.changeColor("red");       
+        eye.moveVertical(20);
+        eye.moveHorizontal(-195);
+        eye.changeSize(50);       
+        
+        pupila = new Circle();  
+        pupila.changeSize(20); 
+        pupila.moveHorizontal(-180);
+        pupila.moveVertical(30);
+        pupila.changeColor("green");
         
         
         
@@ -133,4 +153,39 @@ public class Picture
         p1.slowMoveHorizontal(150);
         }
     }
+    
+     /**
+     * Draw this picture.
+     */
+    public void Illuminati()
+    {
+        
+        piramide.makeVisible();   
+                      
+        eye.makeVisible();
+                
+        pupila.makeVisible();
+
+        
+                   
+                       
+               
+                
+       
+    }
+     /**
+     * Change this picture to use color display
+     */
+    public void illuminatycolor()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            
+            piramide.changeColor("black");           
+            eye.changeColor("withe");
+            pupila.changeColor("black");
+            
+        }
+    }
 }
+
